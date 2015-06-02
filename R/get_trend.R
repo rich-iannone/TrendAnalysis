@@ -65,10 +65,6 @@ get_trend <- function(y){
   
   t_prime <- t[1:(n - 1)]
   
-  ret <- c(lbound = NA, trend = NA, trendp = NA, ubound = NA, 
-           tau = NA, sig = NA, nruns = NA, autocor = NA, valid_frac = NA, 
-           linear = NA, intercept = NA)
-  
   dmap <- which(!is.na(y))
   
   ynm <- as.numeric(y[dmap])
