@@ -1,2 +1,3 @@
 # TrendAnalysis
-An R package for trend analyses in time-series data
+
+An R package for trend analysis of time-series data.
