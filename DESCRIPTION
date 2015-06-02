@@ -1,0 +1,10 @@
+Package: TrendAnalysis
+Type: Package
+Title: Trend Analysis using Sen and Kendall Methods
+Version: 0.1
+Date: 2015-06-01
+Authors@R: 'Richard Iannone <riannone@me.com> [aut,cre]'
+Description: Easily use time series data from data frames to conduct trend analyses.
+License: MIT + file LICENSE
+Imports:
+    Kendall (>= 2.2)
