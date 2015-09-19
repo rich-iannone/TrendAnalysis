@@ -1,6 +1,6 @@
 #' Determine trend information using Sen's methodology and Kendall tests
 #' @description Using a vector of data, The Thiel-Sen method for trend determination will be carried out with a Kendall test for significance. 
-#' @param y a vector of data for which the trend anlysis will be undertaken.
+#' @param y a vector of evenly-spaced data points to be taken for analysis.
 #' @return a data frame.
 #' @import Kendall
 #' @export get_trend
