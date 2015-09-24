@@ -31,6 +31,26 @@ get_trend <- function(df,
     val_col_number <- val_col
   }
   
+  # Define the subsample used for analysis
+  y <- df[,val_col]
+  
+  if (!is.null(start_window) & !is.null(window_width)){
+    
+    if (is.numeric(window_width) & length(window_width > length(y))){
+      
+      y <- y[start_window:length(y)] 
+    }
+    
+    if (is.character(window_width) & window_width == "end"){
+      
+      y <- y[start_window:length(y)] 
+    }
+    
+    if (is.numeric(window_width)){
+      
+      y <- y[start_window:(start_window + window_width)] 
+    }
+  }
   
   # Define the 'slope_diff' function
   slope_diff <- function(i, xx, yy, n){
