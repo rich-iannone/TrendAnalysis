@@ -166,17 +166,20 @@ get_trend <- function(df,
   
   ci <- get_ci(res)
   
-  trend_df[1,1] <- as.numeric(median_slope)
-  trend_df[1,2] <- as.numeric(Bsig)
-  trend_df[1,3] <- as.numeric(ci[2, 1])
-  trend_df[1,4] <- as.numeric(ci[2, 2])
-  trend_df[1,5] <- as.numeric(res$coefficients[1])
-  trend_df[1,6] <- as.numeric(median_slope) * n
-  trend_df[1,7] <- as.numeric(tau)
-  trend_df[1,8] <- as.numeric(ac)
-  trend_df[1,9] <- as.numeric(length(dmap)/length(y))
-  trend_df[1,10] <- as.numeric(lm(y ~ t)$coefficients[2])
-  trend_df[1,11] <- as.numeric(lm(y ~ t)$coefficients[1])
+  # Fill in finalized trends data frame and return
+  trend_df[1,1] <- start_window
+  trend_df[1,2] <- start_window + window_width
+  trend_df[1,3] <- as.numeric(median_slope)
+  trend_df[1,4] <- as.numeric(Bsig)
+  trend_df[1,5] <- as.numeric(ci[2, 1])
+  trend_df[1,6] <- as.numeric(ci[2, 2])
+  trend_df[1,7] <- as.numeric(res$coefficients[1])
+  trend_df[1,8] <- as.numeric(median_slope) * n
+  trend_df[1,9] <- as.numeric(tau)
+  trend_df[1,10] <- as.numeric(ac)
+  trend_df[1,11] <- as.numeric(length(dmap)/length(y))
+  trend_df[1,12] <- as.numeric(lm(y ~ t)$coefficients[2])
+  trend_df[1,13] <- as.numeric(lm(y ~ t)$coefficients[1])
   
   return(trend_df)
 }
