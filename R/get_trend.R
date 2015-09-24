@@ -96,10 +96,10 @@ get_trend <- function(df,
   }
   
   # Create a data frame for which the data will reside
-  trend_df <- as.data.frame(mat.or.vec(nr = 1, nc = 11))
+  trend_df <- as.data.frame(mat.or.vec(nr = 1, nc = 13))
   
-  colnames(trend_df) <- c("trend", "signif", "lbound", "ubound",
-                          "y_int", "trend_p", "tau", "autocor",
+  colnames(trend_df) <- c("start", "end", "trend", "signif", "lbound",
+                          "ubound", "y_int", "trend_p", "tau", "autocor",
                           "valid_frac", "linest_slope", "linest_y_int")
   
   n <- length(y)
