@@ -11,6 +11,27 @@ get_trend <- function(df,
                       start_window = NULL,
                       window_width = NULL){
   
+  if (class(dt_col) == "character"){
+    
+    dt_col_number <- which(colnames(df) == dt_col)
+  }
+  
+  if (class(dt_col) == "numeric"){
+    
+    dt_col_number <- dt_col
+  }
+  
+  if (class(val_col) == "character"){
+    
+    val_col_number <- which(colnames(df) == val_col)
+  }
+  
+  if (class(val_col) == "numeric"){
+    
+    val_col_number <- val_col
+  }
+  
+  
   # Define the 'slope_diff' function
   slope_diff <- function(i, xx, yy, n){
     (yy[1:(n - i)] - yy[(i + 1):n])/(xx[1:(n - i)] - xx[(i + 1):n])
