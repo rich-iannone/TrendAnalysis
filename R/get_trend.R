@@ -5,7 +5,11 @@
 #' @import Kendall
 #' @export get_trend
 
-get_trend <- function(y){
+get_trend <- function(df,
+                      dt_col,
+                      val_col,
+                      start_window = NULL,
+                      window_width = NULL){
   
   # Define the 'slope_diff' function
   slope_diff <- function(i, xx, yy, n){
