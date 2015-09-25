@@ -1,6 +1,10 @@
 #' Determine trend information using Sen's methodology and Kendall tests
 #' @description Using a vector of data, The Thiel-Sen method for trend determination will be carried out with a Kendall test for significance. 
-#' @param y a vector of evenly-spaced data points to be taken for analysis.
+#' @param df a data frame containing at least one column of date-time values, and a column of numeric data for which a trend analysis will be undertaken.
+#' @param dt_col the name or column number of date-time values to be used in the analysis.
+#' @param val_col the name or column number of numerical values to be used in the analysis.
+#' @param start_window an integer representing the start of the windowed data used in the analysis.
+#' @param window_width an integer representing the width of the windowed data used in the analysis. 
 #' @return a data frame.
 #' @import Kendall
 #' @export get_trend
