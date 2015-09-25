@@ -4,10 +4,18 @@
 \alias{get_trend}
 \title{Determine trend information using Sen's methodology and Kendall tests}
 \usage{
-get_trend(y)
+get_trend(df, dt_col, val_col, start_window = NULL, window_width = NULL)
 }
 \arguments{
-\item{y}{a vector of data for which the trend anlysis will be undertaken.}
+\item{df}{a data frame containing at least one column of date-time values, and a column of numeric data for which a trend analysis will be undertaken.}
+
+\item{dt_col}{the name or column number of date-time values to be used in the analysis.}
+
+\item{val_col}{the name or column number of numerical values to be used in the analysis.}
+
+\item{start_window}{an integer representing the start of the windowed data used in the analysis.}
+
+\item{window_width}{an integer representing the width of the windowed data used in the analysis.}
 }
 \value{
 a data frame.
